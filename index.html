@@ -357,36 +357,15 @@
     </form>
 
 <script>
-  document.getElementById('data-form').addEventListener('submit', async function (e) {
-    e.preventDefault(); // prevent default form submission
+  document.getElementById('data-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // prevent page reload
     const form = e.target;
-
-    // Create form data
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-
-    // Replace with your actual n8n webhook URL
-    const webhookUrl = "https://your-n8n-webhook-url";
-
-    try {
-      const response = await fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      });
-
-      if (response.ok) {
-        form.reset(); // Clear the form
-        showConfirmation();
-      } else {
-        alert("There was a problem submitting your request. Please try again.");
-      }
-    } catch (error) {
-      alert("Something went wrong. Please check your internet connection and try again.");
-      console.error(error);
-    }
+    
+    // Simulate a delay like real submission
+    setTimeout(() => {
+      form.reset(); // clear form
+      showConfirmation(); // show message
+    }, 1000); // 1-second fake delay
   });
 
   function showConfirmation() {
