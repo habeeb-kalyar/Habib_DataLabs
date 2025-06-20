@@ -198,35 +198,104 @@
 
 
         <section id="request-data">
-        <h2>Request Business Data</h2>
-        <p>Tell us what kind of business data you need, and we'll get started.</p>
-        <form action="https://your-n8n-webhook-url" method="POST">
-            <label for="business">Business Name (optional)</label><br>
-            <input type="text" id="business" name="business" placeholder="e.g. Real Estate Brokers" required><br><br>
+  <h2>Request Business Data</h2>
+  <p>Tell us what kind of business data you need, and we'll get started.</p>
 
-            <label for="industry">Industry <span style="color: red">*</span></label><br>
-            <input type="text" id="industry" name="industry" required placeholder="e.g. Lawyers, Cafes"><br><br>
+  <form action="https://your-n8n-webhook-url" method="POST" id="data-form">
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="business">Business Name (optional)</label>
+        <input type="text" id="business" name="business" placeholder="e.g. Real Estate Brokers">
+      </div>
 
-            <label for="location">Location <span style="color: red">*</span></label><br>
-            <input type="text" id="location" name="location" required placeholder="e.g. New York, London"><br><br>
+      <div class="form-group">
+        <label for="industry">Industry <span style="color: red">*</span></label>
+        <input type="text" id="industry" name="industry" required placeholder="e.g. Lawyers, Cafes">
+      </div>
 
-            <label for="listings">Number of Listings Required <span style="color: red">*</span></label><br>
-            <input type="number" id="listings" name="listings" min="1" required placeholder="e.g. 100"><br><br>
+      <div class="form-group">
+        <label for="location">Location <span style="color: red">*</span></label>
+        <input type="text" id="location" name="location" required placeholder="e.g. New York, London">
+      </div>
 
-            <label for="email">Your Email <span style="color: red">*</span></label><br>
-            <input type="email" id="email" name="email" required placeholder="example@example.com"><br><br>
+      <div class="form-group">
+        <label for="listings">Number of Listings Required <span style="color: red">*</span></label>
+        <input type="number" id="listings" name="listings" min="1" required placeholder="e.g. 100">
+      </div>
 
-            <label for="whatsapp">WhatsApp Number (optional)</label><br>
-            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 234 567 8901"><br><br>
+      <div class="form-group">
+        <label for="email">Your Email <span style="color: red">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="example@example.com">
+      </div>
 
-            <label for="notes">Message or Notes (optional)</label><br>
-            <textarea id="notes" name="notes" rows="4" placeholder="Any special instructions?"></textarea><br><br>
+      <div class="form-group">
+        <label for="whatsapp">WhatsApp Number (optional)</label>
+        <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 234 567 8901">
+      </div>
+    </div>
 
-            <button type="submit" style="background-color:#007bff;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
-                Submit Request
-            </button>
-        </form>
-    </section>
+    <div class="form-group-full">
+      <label for="notes">Message or Notes (optional)</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Any special instructions?"></textarea>
+    </div>
+
+    <div class="form-group-full" style="text-align:center;">
+      <button type="submit">Submit Request</button>
+    </div>
+  </form>
+</section>
+
+<style>
+  #data-form {
+    margin-top: 20px;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .form-group,
+  .form-group-full {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input, textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    margin-top: 5px;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 700px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
 
 
     <section id="contact">
