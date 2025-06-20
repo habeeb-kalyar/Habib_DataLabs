@@ -293,69 +293,12 @@
     <h2>Request Custom Business Data for free</h2>
     <p>Please provide your details and specify the kind of business data you need.</p>
 
-    <form action="https://habib533.app.n8n.cloud/webhook/form-submit" method="POST" id="data-form">
-      <fieldset>
-        <legend>1. Your Information</legend>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="full_name">Full Name <span style="color: red">*</span></label>
-            <input type="text" id="full_name" name="full_name" required placeholder="e.g. John Doe">
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Address <span style="color: red">*</span></label>
-            <input type="email" id="email" name="email" required placeholder="you@example.com">
-          </div>
-
-          <div class="form-group">
-            <label for="whatsapp">WhatsApp Number (optional)</label>
-            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 234 567 8901">
-          </div>
-
-          <div class="form-group">
-            <label for="company">Company / Business Name (optional)</label>
-            <input type="text" id="company" name="company" placeholder="Your Company Name">
-          </div>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>2. Data Requirements</legend>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="industry">Target Industry <span style="color: red">*</span></label>
-            <input type="text" id="industry" name="industry" required placeholder="e.g. Lawyers, Restaurants">
-          </div>
-
-          <div class="form-group">
-            <label for="location">Target Location <span style="color: red">*</span></label>
-            <input type="text" id="location" name="location" required placeholder="e.g. New York, London">
-          </div>
-
-          <div class="form-group">
-            <label for="listings">Number of Listings Needed <span style="color: red">*</span></label>
-            <input type="number" id="listings" name="listings" min="1" required placeholder="e.g. 200">
-          </div>
-
-          <div class="form-group">
-            <label for="platform">Preferred Data Source (optional)</label>
-            <input type="text" id="platform" name="platform" placeholder="e.g. Google Maps, Yelp">
-          </div>
-        </div>
-
-        <div class="form-group-full">
-          <label for="notes">Specific Instructions or Notes (optional)</label>
-          <textarea id="notes" name="notes" rows="4" placeholder="Describe any special data fields or preferences..."></textarea>
-        </div>
-      </fieldset>
-
-      <div class="form-group-full" style="text-align:center;">
-        <button type="submit">Submit Request</button>
-      </div>
-    </form>
-
+   
+<div style="text-align: center; margin-top: 30px;">
+  <a href="https://forms.gle/hu1q8tv9jutbzA5S9" target="_blank" class="google-form-button">
+    📝 Submit Data Request Form
+  </a>
+</div>
 
 
     
@@ -513,6 +456,25 @@
 .close:hover {
   color: #ffeb3b;
 }
+
+.google-form-button {
+  background: #ff5722; /* bright contrast color */
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 18px 40px;
+  border-radius: 12px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.google-form-button:hover {
+  background: #e64a19;
+  transform: translateY(-3px);
+}
+
 
   </style>
 
