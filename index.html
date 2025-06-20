@@ -199,45 +199,68 @@
 
         <section id="request-data">
   <h2>Request Business Data</h2>
-  <p>Tell us what kind of business data you need, and we'll get started.</p>
+  <p>Please provide your details and specify the kind of business data you need.</p>
 
   <form action="https://your-n8n-webhook-url" method="POST" id="data-form">
-    <div class="form-grid">
-      <div class="form-group">
-        <label for="business">Business Name (optional)</label>
-        <input type="text" id="business" name="business" placeholder="e.g. Real Estate Brokers">
+    
+    <!-- Client Info Section -->
+    <fieldset>
+      <legend>1. Your Information</legend>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="full_name">Full Name <span style="color: red">*</span></label>
+          <input type="text" id="full_name" name="full_name" required placeholder="e.g. John Doe">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address <span style="color: red">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp Number (optional)</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 234 567 8901">
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company / Business Name (optional)</label>
+          <input type="text" id="company" name="company" placeholder="Your Company Name">
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- Data Requirement Section -->
+    <fieldset>
+      <legend>2. Data Requirements</legend>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="industry">Target Industry <span style="color: red">*</span></label>
+          <input type="text" id="industry" name="industry" required placeholder="e.g. Lawyers, Restaurants">
+        </div>
+
+        <div class="form-group">
+          <label for="location">Target Location <span style="color: red">*</span></label>
+          <input type="text" id="location" name="location" required placeholder="e.g. New York, London">
+        </div>
+
+        <div class="form-group">
+          <label for="listings">Number of Listings Needed <span style="color: red">*</span></label>
+          <input type="number" id="listings" name="listings" min="1" required placeholder="e.g. 200">
+        </div>
+
+        <div class="form-group">
+          <label for="platform">Platform to Scrape From (optional)</label>
+          <input type="text" id="platform" name="platform" placeholder="e.g. Google Maps, Yelp">
+        </div>
       </div>
 
-      <div class="form-group">
-        <label for="industry">Industry <span style="color: red">*</span></label>
-        <input type="text" id="industry" name="industry" required placeholder="e.g. Lawyers, Cafes">
+      <div class="form-group-full">
+        <label for="notes">Specific Instructions or Notes (optional)</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Describe any special data fields or preferences..."></textarea>
       </div>
-
-      <div class="form-group">
-        <label for="location">Location <span style="color: red">*</span></label>
-        <input type="text" id="location" name="location" required placeholder="e.g. New York, London">
-      </div>
-
-      <div class="form-group">
-        <label for="listings">Number of Listings Required <span style="color: red">*</span></label>
-        <input type="number" id="listings" name="listings" min="1" required placeholder="e.g. 100">
-      </div>
-
-      <div class="form-group">
-        <label for="email">Your Email <span style="color: red">*</span></label>
-        <input type="email" id="email" name="email" required placeholder="example@example.com">
-      </div>
-
-      <div class="form-group">
-        <label for="whatsapp">WhatsApp Number (optional)</label>
-        <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 234 567 8901">
-      </div>
-    </div>
-
-    <div class="form-group-full">
-      <label for="notes">Message or Notes (optional)</label>
-      <textarea id="notes" name="notes" rows="4" placeholder="Any special instructions?"></textarea>
-    </div>
+    </fieldset>
 
     <div class="form-group-full" style="text-align:center;">
       <button type="submit">Submit Request</button>
@@ -246,8 +269,22 @@
 </section>
 
 <style>
-  #data-form {
+  #request-data form {
     margin-top: 20px;
+  }
+
+  fieldset {
+    border: 2px solid #ddd;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+  }
+
+  legend {
+    font-size: 1.3em;
+    color: #007bff;
+    font-weight: bold;
+    padding: 0 10px;
   }
 
   .form-grid {
@@ -260,14 +297,17 @@
   .form-group-full {
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
   }
 
-  input, textarea {
+  input,
+  textarea {
     padding: 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
     font-size: 1em;
     margin-top: 5px;
+    width: 100%;
   }
 
   textarea {
@@ -296,6 +336,7 @@
     }
   }
 </style>
+
 
 
     <section id="contact">
