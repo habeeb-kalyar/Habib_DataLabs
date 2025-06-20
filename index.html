@@ -355,6 +355,53 @@
         <button type="submit">Submit Request</button>
       </div>
     </form>
+
+<script>
+  document.getElementById('data-form').addEventListener('submit', async function (e) {
+    e.preventDefault(); // prevent default form submission
+    const form = e.target;
+
+    // Create form data
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    // Replace with your actual n8n webhook URL
+    const webhookUrl = "https://your-n8n-webhook-url";
+
+    try {
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        form.reset(); // Clear the form
+        showConfirmation();
+      } else {
+        alert("There was a problem submitting your request. Please try again.");
+      }
+    } catch (error) {
+      alert("Something went wrong. Please check your internet connection and try again.");
+      console.error(error);
+    }
+  });
+
+  function showConfirmation() {
+    const confirmation = document.createElement('div');
+    confirmation.innerHTML = `
+      <div style="background: #e6ffe6; padding: 20px; border: 1px solid #8bc34a; margin-top: 20px; text-align: center;">
+        ✅ Your request has been received and is now in the queue.<br>
+        You will be notified via <strong>email or WhatsApp</strong> once the data is ready. Thank you!
+      </div>
+    `;
+    document.getElementById('data-form').insertAdjacentElement('afterend', confirmation);
+  }
+</script>
+
+    
   </section>
 
   <style>
