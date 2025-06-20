@@ -176,10 +176,10 @@
         <h2>Experience & Projects</h2>
 
         <h3>Google Maps & Yelp Scraper</h3>
-        <p>We developed advanced scrapers to collect comprehensive business data, including contact details, reviews, and location information. Clients have used these scrapers to enhance their local marketing strategies and gain a competitive edge.</p>
+        <p>We developed advanced scrapers to collect comprehensive business data, including  details, reviews, and location information. Clients have used these scrapers to enhance their local marketing strategies and gain a competitive edge.</p>
 
         <h3>Email Verification & Lead Generation</h3>
-        <p>Successfully executed email verification projects using LinkedIn Sales Navigator and Apollo, ensuring clients have reliable contact data for their outreach efforts. Our verified data has driven the success of numerous marketing campaigns.</p>
+        <p>Successfully executed email verification projects using LinkedIn Sales Navigator and Apollo, ensuring clients have reliable  data for their outreach efforts. Our verified data has driven the success of numerous marketing campaigns.</p>
 
         <h3>Client Success Stories</h3>
         <ul>
@@ -195,6 +195,39 @@
             <li>"Their custom scraping solution was a perfect fit for our needs. Highly recommend their services!"</li>
         </ul>
     </section>
+
+
+        <section id="request-data">
+        <h2>Request Business Data</h2>
+        <p>Tell us what kind of business data you need, and we'll get started.</p>
+        <form action="https://your-n8n-webhook-url" method="POST">
+            <label for="business">Business Name (optional)</label><br>
+            <input type="text" id="business" name="business" placeholder="e.g. Real Estate Brokers" required><br><br>
+
+            <label for="industry">Industry <span style="color: red">*</span></label><br>
+            <input type="text" id="industry" name="industry" required placeholder="e.g. Lawyers, Cafes"><br><br>
+
+            <label for="location">Location <span style="color: red">*</span></label><br>
+            <input type="text" id="location" name="location" required placeholder="e.g. New York, London"><br><br>
+
+            <label for="listings">Number of Listings Required <span style="color: red">*</span></label><br>
+            <input type="number" id="listings" name="listings" min="1" required placeholder="e.g. 100"><br><br>
+
+            <label for="email">Your Email <span style="color: red">*</span></label><br>
+            <input type="email" id="email" name="email" required placeholder="example@example.com"><br><br>
+
+            <label for="whatsapp">WhatsApp Number (optional)</label><br>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 234 567 8901"><br><br>
+
+            <label for="notes">Message or Notes (optional)</label><br>
+            <textarea id="notes" name="notes" rows="4" placeholder="Any special instructions?"></textarea><br><br>
+
+            <button type="submit" style="background-color:#007bff;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
+                Submit Request
+            </button>
+        </form>
+    </section>
+
 
     <section id="contact">
         <h2>Contact Us</h2>
