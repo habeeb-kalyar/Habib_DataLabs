@@ -110,6 +110,52 @@
     .back-to-top:hover {
       background: #0056b3;
     }
+
+    #contact {
+  margin-top: 60px;
+  padding: 40px 20px;
+  background-color: #f9fbfd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.contact-card {
+  background: #fff;
+  border-left: 4px solid #007bff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+  color: #007bff;
+}
+
+.contact-card p a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-card p a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
   </style>
 </head>
 <body>
@@ -305,15 +351,37 @@
   </style>
 
   <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Got a project in mind? Let’s connect!</p>
-    <ul>
-      <li><strong>Phone</strong>: +923060070762</li>
-      <li><strong>Email</strong>: <a href="mailto:habeebkalyar@gmail.com">habeebkalyar@gmail.com</a></li>
-      <li><strong>Fiverr</strong>: <a href="https://www.fiverr.com/habeeb_kalyar" target="_blank">Visit My Fiverr Profile</a></li>
-      <li><strong>Gigs</strong>: <a href="https://www.fiverr.com/s/R7lZmKL" target="_blank">Explore My Fiverr Gigs</a></li>
-    </ul>
-  </section>
+  <h2>Contact Us</h2>
+  <p>We’re just a message away. Reach out through your preferred platform:</p>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>💬 WhatsApp</h3>
+      <p><a href="https://wa.me/923060070762" target="_blank">Chat on WhatsApp</a></p>
+    </div>
+
+    <div class="contact-card">
+      <h3>📧 Email</h3>
+      <p><a href="mailto:habeebkalyar@gmail.com">habeebkalyar@gmail.com</a></p>
+    </div>
+
+    <div class="contact-card">
+      <h3>💼 LinkedIn</h3>
+      <p><a href="https://www.linkedin.com/in/muhammad-habeeb-985497238/" target="_blank">View LinkedIn Profile</a></p>
+    </div>
+
+    <div class="contact-card">
+      <h3>🌍 Freelancer</h3>
+      <p><a href="https://www.freelancer.com/u/HabibDataLabs" target="_blank">Visit Freelancer Profile</a></p>
+    </div>
+
+    <div class="contact-card">
+      <h3>📘 Facebook</h3>
+      <p><a href="https://www.facebook.com/profile.php?id=61564322477648" target="_blank">Visit Facebook Page</a></p>
+    </div>
+  </div>
+</section>
+
 
   <footer>
     <p>© 2024 Habib Data Labs. All rights reserved.</p>
