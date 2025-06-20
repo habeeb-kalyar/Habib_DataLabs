@@ -1,361 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habib Data Labs</title>
-    <style>
-        /* Enhanced CSS */
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f4;
-            scroll-behavior: smooth; /* Smooth scrolling */
-        }
-
-        header {
-            background: linear-gradient(90deg, #007bff, #00c6ff);
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        header p {
-            font-size: 1.3em;
-            margin: 10px 0;
-        }
-
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #ffeb3b;
-        }
-
-        section {
-            padding: 20px;
-            margin: 40px auto;
-            max-width: 800px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        section:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-        }
-
-        h2 {
-            color: #007bff;
-            border-bottom: 3px solid #007bff;
-            padding-bottom: 5px;
-            font-size: 2em;
-        }
-
-        h3 {
-            color: #00c6ff;
-            margin-top: 20px;
-        }
-
-        ul {
-            list-style-type: disc;
-            margin: 10px 0 10px 20px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #0056b3;
-            text-decoration: underline;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #ffeb3b;
-            text-decoration: underline;
-        }
-
-        footer p {
-            margin: 10px 0;
-        }
-
-        .back-to-top {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background: #007bff;
-            color: #fff;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
-
-        .back-to-top:hover {
-            background: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habib Data Labs</title>
+  <style>
+    /* [Same CSS as before, unchanged] */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f4f4f4;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(90deg, #007bff, #00c6ff);
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    header p {
+      font-size: 1.3em;
+      margin: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffeb3b;
+    }
+    section {
+      padding: 20px;
+      margin: 40px auto;
+      max-width: 800px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    section:hover {
+      transform: translateY(-5px);
+    }
+    h2 {
+      color: #007bff;
+      border-bottom: 3px solid #007bff;
+      padding-bottom: 5px;
+      font-size: 2em;
+    }
+    h3 {
+      color: #00c6ff;
+      margin-top: 20px;
+    }
+    ul {
+      list-style-type: disc;
+      margin: 10px 0 10px 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: #ffeb3b;
+    }
+    footer p {
+      margin: 10px 0;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .back-to-top:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Habib Data Labs</h1>
-        <p><em>Expert in B2B Lead Generation & Web Scraping Solutions</em></p>
-        <nav>
-            <a href="#contact">Contact Us</a>
-            <a href="https://www.freelancer.com/u/HabibDataLabs?frm=HabibDataLabs&sb=t" target="_blank">Our Portfolio</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Habib Data Labs</h1>
+    <p><em>Expert in B2B Lead Generation & Data Extraction Solutions</em></p>
+    <nav>
+      <a href="#contact">Contact Us</a>
+      <a href="https://www.freelancer.com/u/HabibDataLabs?frm=HabibDataLabs&sb=t" target="_blank">Our Portfolio</a>
+    </nav>
+  </header>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>At <strong>Habib Data Labs</strong>, we specialize in delivering top-tier B2B leads and customized web scraping solutions tailored to your business needs. With deep expertise in data extraction and verification, we empower businesses with actionable insights to thrive in today’s competitive landscape. Our mission is to provide you with reliable, accurate data to drive informed decision-making and business growth.</p>
-    </section>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At <strong>Habib Data Labs</strong>, we specialize in delivering top-tier B2B leads and customized data collection solutions tailored to your business needs. With deep expertise in data extraction and verification, we empower businesses with actionable insights to thrive in today’s competitive landscape. Our mission is to provide you with reliable, accurate data to drive informed decision-making and business growth.</p>
+  </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <h3>B2B Lead Generation</h3>
-        <p>We provide verified emails and contact information for companies using advanced tools like LinkedIn Sales Navigator and Apollo. Whether you’re seeking leads for targeted marketing campaigns or sales outreach, we deliver the most accurate and up-to-date data to fuel your success.</p>
+  <section id="services">
+    <h2>Our Services</h2>
+    <h3>B2B Lead Generation</h3>
+    <p>We provide verified emails and contact information for companies using advanced tools like LinkedIn Sales Navigator and Apollo. Whether you’re seeking leads for targeted marketing campaigns or sales outreach, we deliver the most accurate and up-to-date data to fuel your success.</p>
 
-        <h3>Web Scraping Solutions</h3>
-        <p>Our cutting-edge web scraping services extract detailed business information from platforms such as Google Maps and Yelp. Leveraging technologies like Python, Scrapy, and Playwright, we gather the data you need to make strategic business decisions.</p>
+    <h3>Automated Data Collection</h3>
+    <p>Our automated data collection services extract detailed business information from platforms such as Google Maps and Yelp. Leveraging technologies like Python, Scrapy, and Playwright, we gather the data you need to make strategic business decisions.</p>
 
-        <h3>Custom Data Solutions</h3>
-        <p>Do you have unique data requirements? We offer tailor-made web scraping solutions designed to meet your specific needs. Let us create a scraper that perfectly aligns with your business objectives.</p>
-    </section>
+    <h3>Custom Data Solutions</h3>
+    <p>Do you have unique data requirements? We offer tailor-made automation tools designed to meet your specific needs. Let us build a solution that perfectly aligns with your business objectives.</p>
+  </section>
 
-    <section id="skills">
-        <h2>Skills & Tools</h2>
-        <ul>
-            <li><strong>Python</strong>: Powerful programming for data extraction and automation.</li>
-            <li><strong>Scrapy</strong>: High-efficiency web scraping framework.</li>
-            <li><strong>Playwright</strong>: Advanced browser automation for complex scraping tasks.</li>
-            <li><strong>LinkedIn Sales Navigator</strong>: Precise B2B lead generation.</li>
-            <li><strong>Apollo</strong>: Email verification and data enrichment tool.</li>
-        </ul>
-    </section>
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+    <ul>
+      <li><strong>Python</strong>: Powerful programming for data extraction and automation.</li>
+      <li><strong>Scrapy</strong>: High-efficiency data collection framework.</li>
+      <li><strong>Playwright</strong>: Advanced browser automation for complex data tasks.</li>
+      <li><strong>LinkedIn Sales Navigator</strong>: Precise B2B lead generation.</li>
+      <li><strong>Apollo</strong>: Email verification and data enrichment tool.</li>
+    </ul>
+  </section>
 
-    <section id="experience">
-        <h2>Experience & Projects</h2>
+  <section id="experience">
+    <h2>Experience & Projects</h2>
 
-        <h3>Google Maps & Yelp Scraper</h3>
-        <p>We developed advanced scrapers to collect comprehensive business data, including  details, reviews, and location information. Clients have used these scrapers to enhance their local marketing strategies and gain a competitive edge.</p>
+    <h3>Google Maps & Yelp Data Collection Tool</h3>
+    <p>We developed advanced tools to collect comprehensive business data, including contact details, reviews, and location information. Clients have used these tools to enhance their local marketing strategies and gain a competitive edge.</p>
 
-        <h3>Email Verification & Lead Generation</h3>
-        <p>Successfully executed email verification projects using LinkedIn Sales Navigator and Apollo, ensuring clients have reliable  data for their outreach efforts. Our verified data has driven the success of numerous marketing campaigns.</p>
+    <h3>Email Verification & Lead Generation</h3>
+    <p>Successfully executed email verification projects using LinkedIn Sales Navigator and Apollo, ensuring clients have reliable data for their outreach efforts. Our verified data has driven the success of numerous marketing campaigns.</p>
 
-        <h3>Client Success Stories</h3>
-        <ul>
-            <li>"Habib Data Labs delivered precise data that fueled our targeted marketing campaign. Their attention to detail was outstanding."</li>
-            <li>"The web scraping solution they provided saved us countless hours and resources, allowing us to focus on our core business."</li>
-        </ul>
-    </section>
+    <h3>Client Success Stories</h3>
+    <ul>
+      <li>"Habib Data Labs delivered precise data that fueled our targeted marketing campaign. Their attention to detail was outstanding."</li>
+      <li>"The data automation solution they provided saved us countless hours and resources, allowing us to focus on our core business."</li>
+    </ul>
+  </section>
 
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-        <ul>
-            <li>"Habib Data Labs revolutionized our lead generation process. Their data accuracy and customer service are unmatched."</li>
-            <li>"Their custom scraping solution was a perfect fit for our needs. Highly recommend their services!"</li>
-        </ul>
-    </section>
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <ul>
+      <li>"Habib Data Labs revolutionized our lead generation process. Their data accuracy and customer service are unmatched."</li>
+      <li>"Their custom data solution was a perfect fit for our needs. Highly recommend their services!"</li>
+    </ul>
+  </section>
 
+  <section id="request-data">
+    <h2>Request Custom Business Data</h2>
+    <p>Please provide your details and specify the kind of business data you need.</p>
 
-        <section id="request-data">
-  <h2>Request Business Data</h2>
-  <p>Please provide your details and specify the kind of business data you need.</p>
+    <form action="https://your-n8n-webhook-url" method="POST" id="data-form">
+      <fieldset>
+        <legend>1. Your Information</legend>
 
-  <form action="https://your-n8n-webhook-url" method="POST" id="data-form">
-    
-    <!-- Client Info Section -->
-    <fieldset>
-      <legend>1. Your Information</legend>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="full_name">Full Name <span style="color: red">*</span></label>
+            <input type="text" id="full_name" name="full_name" required placeholder="e.g. John Doe">
+          </div>
 
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="full_name">Full Name <span style="color: red">*</span></label>
-          <input type="text" id="full_name" name="full_name" required placeholder="e.g. John Doe">
+          <div class="form-group">
+            <label for="email">Email Address <span style="color: red">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp Number (optional)</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 234 567 8901">
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company / Business Name (optional)</label>
+            <input type="text" id="company" name="company" placeholder="Your Company Name">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Data Requirements</legend>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="industry">Target Industry <span style="color: red">*</span></label>
+            <input type="text" id="industry" name="industry" required placeholder="e.g. Lawyers, Restaurants">
+          </div>
+
+          <div class="form-group">
+            <label for="location">Target Location <span style="color: red">*</span></label>
+            <input type="text" id="location" name="location" required placeholder="e.g. New York, London">
+          </div>
+
+          <div class="form-group">
+            <label for="listings">Number of Listings Needed <span style="color: red">*</span></label>
+            <input type="number" id="listings" name="listings" min="1" required placeholder="e.g. 200">
+          </div>
+
+          <div class="form-group">
+            <label for="platform">Preferred Data Source (optional)</label>
+            <input type="text" id="platform" name="platform" placeholder="e.g. Google Maps, Yelp">
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="email">Email Address <span style="color: red">*</span></label>
-          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        <div class="form-group-full">
+          <label for="notes">Specific Instructions or Notes (optional)</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Describe any special data fields or preferences..."></textarea>
         </div>
+      </fieldset>
 
-        <div class="form-group">
-          <label for="whatsapp">WhatsApp Number (optional)</label>
-          <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 234 567 8901">
-        </div>
-
-        <div class="form-group">
-          <label for="company">Company / Business Name (optional)</label>
-          <input type="text" id="company" name="company" placeholder="Your Company Name">
-        </div>
+      <div class="form-group-full" style="text-align:center;">
+        <button type="submit">Submit Request</button>
       </div>
-    </fieldset>
+    </form>
+  </section>
 
-    <!-- Data Requirement Section -->
-    <fieldset>
-      <legend>2. Data Requirements</legend>
-
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="industry">Target Industry <span style="color: red">*</span></label>
-          <input type="text" id="industry" name="industry" required placeholder="e.g. Lawyers, Restaurants">
-        </div>
-
-        <div class="form-group">
-          <label for="location">Target Location <span style="color: red">*</span></label>
-          <input type="text" id="location" name="location" required placeholder="e.g. New York, London">
-        </div>
-
-        <div class="form-group">
-          <label for="listings">Number of Listings Needed <span style="color: red">*</span></label>
-          <input type="number" id="listings" name="listings" min="1" required placeholder="e.g. 200">
-        </div>
-
-        <div class="form-group">
-          <label for="platform">Platform to Scrape From (optional)</label>
-          <input type="text" id="platform" name="platform" placeholder="e.g. Google Maps, Yelp">
-        </div>
-      </div>
-
-      <div class="form-group-full">
-        <label for="notes">Specific Instructions or Notes (optional)</label>
-        <textarea id="notes" name="notes" rows="4" placeholder="Describe any special data fields or preferences..."></textarea>
-      </div>
-    </fieldset>
-
-    <div class="form-group-full" style="text-align:center;">
-      <button type="submit">Submit Request</button>
-    </div>
-  </form>
-</section>
-
-<style>
-  #request-data form {
-    margin-top: 20px;
-  }
-
-  fieldset {
-    border: 2px solid #ddd;
-    padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-  }
-
-  legend {
-    font-size: 1.3em;
-    color: #007bff;
-    font-weight: bold;
-    padding: 0 10px;
-  }
-
-  .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .form-group,
-  .form-group-full {
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-  }
-
-  input,
-  textarea {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 1em;
-    margin-top: 5px;
-    width: 100%;
-  }
-
-  textarea {
-    resize: vertical;
-  }
-
-  button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    font-size: 1.1em;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 10px;
-  }
-
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-
-  @media (max-width: 700px) {
-    .form-grid {
-      grid-template-columns: 1fr;
+  <style>
+    /* Form styling unchanged */
+    #request-data form {
+      margin-top: 20px;
     }
-  }
-</style>
+    fieldset {
+      border: 2px solid #ddd;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+    legend {
+      font-size: 1.3em;
+      color: #007bff;
+      font-weight: bold;
+      padding: 0 10px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-group,
+    .form-group-full {
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px;
+    }
+    input,
+    textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      margin-top: 5px;
+      width: 100%;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      font-size: 1.1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 10px;
+    }
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    @media (max-width: 700px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Got a project in mind? Let’s connect!</p>
+    <ul>
+      <li><strong>Phone</strong>: +923060070762</li>
+      <li><strong>Email</strong>: <a href="mailto:habeebkalyar@gmail.com">habeebkalyar@gmail.com</a></li>
+      <li><strong>Fiverr</strong>: <a href="https://www.fiverr.com/habeeb_kalyar" target="_blank">Visit My Fiverr Profile</a></li>
+      <li><strong>Gigs</strong>: <a href="https://www.fiverr.com/s/R7lZmKL" target="_blank">Explore My Fiverr Gigs</a></li>
+    </ul>
+  </section>
 
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Got a project in mind? Let’s connect!</p>
-        <ul>
-            <li><strong>Phone</strong>: +923060070762</li>
-            <li><strong>Email</strong>: <a href="mailto:habeebkalyar@gmail.com">habeebkalyar@gmail.com</a></li>
-            <li><strong>Fiverr</strong>: <a href="https://www.fiverr.com/habeeb_kalyar" target="_blank">Visit My Fiverr Profile</a></li>
-            <li><strong>Gigs</strong>: <a href="https://www.fiverr.com/s/R7lZmKL" target="_blank">Explore My Fiverr Gigs</a></li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>© 2024 Habib Data Labs. All rights reserved.</p>
-        <a href="#">Privacy Policy</a>
-        <br>
-        <a href="#" class="back-to-top">Back to Top</a>
-    </footer>
+  <footer>
+    <p>© 2024 Habib Data Labs. All rights reserved.</p>
+    <a href="#">Privacy Policy</a>
+    <br>
+    <a href="#" class="back-to-top">Back to Top</a>
+  </footer>
 
 </body>
 </html>
