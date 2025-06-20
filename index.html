@@ -183,6 +183,42 @@
   }
 }
 
+.about-columns {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text p {
+  font-size: 1.1em;
+  color: #444;
+  line-height: 1.7;
+}
+
+.about-photo .profile-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 800px) {
+  .about-columns {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-photo {
+    margin-top: 20px;
+  }
+
+  .about-photo .profile-img {
+    max-width: 200px;
+  }
+}
+
 
   </style>
 </head>
@@ -216,11 +252,20 @@
 
   <section id="about">
   <h2>About Us</h2>
-  <div class="about-flex">
-    <img src="https://raw.githubusercontent.com/habeeb-kalyar/Habib_DataLabs/main/images/profile.jpg" alt="Muhammad Habeeb" class="profile-img">
-    <p>At <strong>Habib Data Labs</strong>, we specialize in delivering top-tier B2B leads and customized data collection solutions tailored to your business needs. With deep expertise in data extraction and verification, we empower businesses with actionable insights to thrive in today’s competitive landscape. Our mission is to provide you with reliable, accurate data to drive informed decision-making and business growth.</p>
+  <div class="about-columns">
+    <div class="about-text">
+      <p>
+        At <strong>Habib Data Labs</strong>, we specialize in delivering top-tier B2B leads and customized data collection solutions tailored to your business needs.
+        With deep expertise in data extraction and verification, we empower businesses with actionable insights to thrive in today’s competitive landscape.
+        Our mission is to provide you with reliable, accurate data to drive informed decision-making and business growth.
+      </p>
+    </div>
+    <div class="about-photo">
+      <img src="https://raw.githubusercontent.com/habeeb-kalyar/Habib_DataLabs/main/images/profile.jpg" alt="Muhammad Habeeb" class="profile-img">
+    </div>
   </div>
 </section>
+
 
 
   <section id="services">
